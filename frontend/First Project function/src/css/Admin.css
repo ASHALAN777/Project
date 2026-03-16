@@ -1,0 +1,4 @@
+.dashlay {
+    display: flex;
+    flex-direction: row;
+}

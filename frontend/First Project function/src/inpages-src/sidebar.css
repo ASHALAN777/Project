@@ -1,0 +1,140 @@
+.Sidecon {
+  max-width: 15vw;
+  height: 100vh;
+  background-color: #0b0f16;
+  color: #cfd3dc;
+  border-right: 1px solid #1f2430;
+}
+
+/* Optional title */
+.Sidecon h3 {
+  color: #ffffff;
+  background-color: transparent;
+  height: 50px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* Menu container */
+.Sidemenu {
+  padding: 16px;
+  margin-top: 10px;
+  background: none;
+}
+.Sidemenu div{
+  background: none;
+}
+
+/* Menu link base */
+.menu-link {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: #a9afbd;
+  background-color: transparent;
+
+  min-width: 100px;
+  margin-bottom: 6px;
+  padding: 10px 14px;
+
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+/* Hover */
+.menu-link:hover {
+  background-color: #161b26;
+  color: #ffffff;
+}
+
+/* Active (like screenshot pill style) */
+.menu-link.active {
+  background-color: #1e2433;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Icon base */
+.menu-link::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  opacity: 0.8;
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: invert(70%);
+}
+/* 
+/* Icon hover/active */
+
+/* .menu-link:hover::before,
+.menu-link.active::before {
+  filter: invert(100%);
+}  */
+
+
+
+   /* Specific icons for employee */
+
+
+
+.menu-link[href="/employee"]::before {
+  background-image: url("https://api.iconify.design/lucide/home.svg");
+}
+
+
+
+.menu-link[href="/employee/userprofile"]::before {
+  background-image: url("https://api.iconify.design/lucide/user.svg");
+}
+
+
+
+
+
+
+   /* Specific icons for admin */
+
+
+
+   .menu-link[href="/admin"]::before {
+  background-image: url("https://api.iconify.design/lucide/home.svg");
+}
+
+
+
+.menu-link[href="/admin/userprofile"]::before {
+  background-image: url("https://api.iconify.design/lucide/user.svg");
+}
+
+
+.menu-link[href="/employee/task"]::before {
+  background-image: url("https://api.iconify.design/lucide/bot.svg");
+}
+
+
+.menu-link[href="/admin/crud"]::before {
+  background-image: url("https://api.iconify.design/lucide/clipboard-check.svg");
+}
+
+
+
+
+
+
+
+

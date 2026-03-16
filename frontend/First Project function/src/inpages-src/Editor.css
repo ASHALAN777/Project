@@ -1,0 +1,112 @@
+/* ================= TABLE CONTAINER ================= */
+.table-wrapper {
+  width: 100%;
+  max-height: 300px; /* SAME as employee */
+  overflow-y: auto; /* vertical scroll */
+  overflow-x: hidden; /* prevent horizontal scroll gap */
+  border-radius: 6px; /* rounded corners */
+  background: #ffffff; /* prevents background bleed */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* ================= TABLE ================= */
+.users-table {
+  width: 100%;
+  table-layout: fixed;
+  /* fix corner gaps */
+  /* remove inner table gaps */
+  background: #ffffff;
+  font-size: 14px;
+  border: 1px solid #dcdcdc;
+  border-radius: inherit; /* match wrapper corners */
+  padding-bottom: 35px;
+}
+
+/* ================= TABLE HEADER ================= */
+.users-table th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: #ffffff; /* sticky header background */
+  color: #000;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 6px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+/* ================= TABLE CELLS ================= */
+.users-table td {
+  padding: 8px 6px;
+  background-color: #ffffff;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  color: #111;
+}
+
+/* ================= COLUMN WIDTHS ================= */
+.users-table th:nth-child(1),
+.users-table td:nth-child(1) {
+  width: 6%;
+}
+
+.users-table th:nth-child(2),
+.users-table td:nth-child(2) {
+  width: 10%;
+}
+
+.users-table th:nth-child(3),
+.users-table td:nth-child(3) {
+  width: 15%;
+}
+
+.users-table th:nth-child(4),
+.users-table td:nth-child(4) {
+  width: 10%;
+}
+
+.users-table th:nth-child(5),
+.users-table td:nth-child(5) {
+  width: 15%;
+}
+
+.users-table th:nth-child(6),
+.users-table td:nth-child(6) {
+  width: 15%;
+}
+
+.users-table th:nth-child(7),
+.users-table td:nth-child(7) {
+  width: 15%;
+}
+
+.users-table th:nth-child(8),
+.users-table td:nth-child(8) {
+  width: 60%;
+}
+
+/* ================= ACTION BUTTONS ================= */
+.btnap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* ================= BUTTON ================= */
+button {
+  width: 90px;
+  height: 30px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.Edibody {
+  padding: 20px;
+}

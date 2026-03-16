@@ -1,0 +1,13 @@
+*{
+
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+
+}
+.app{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+ 
+
+}

@@ -1,0 +1,172 @@
+/* Base */
+body {
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont;
+  font-size: 15px;
+}
+
+* {
+  background-color: #f8f9fa;
+}
+
+/* Main wrapper */
+.complete1 {
+  min-height: 89vh;
+  padding: 20px;
+  /* background: #ffffff; */
+}
+
+/* Center container */
+.Container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Top cards */
+.Four {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.Cardu {
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  height: 95px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  font-size: 15px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s ease;
+}
+
+.Cardu:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.Numberu {
+  font-size: 24px;
+  font-weight: 600;
+ color: #2f6fde;
+  background-color: #ffffff;
+}
+
+/* Table container */
+.taable-container {
+  max-width: 1200px;
+  margin: 28px auto 0;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.hey {
+  max-width: 1200px;
+
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.table-drapper {
+  max-height: 320px;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+/* Table */
+.user-table {
+  width: 100%;
+
+  table-layout: fixed;
+  background-color: #ffffff;
+  font-size: 14px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  padding-bottom: 35px;
+}
+
+.user-table thead {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.user-table th {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  color: #000;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 6px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.user-table td {
+  background-color: #ffffff;
+  padding: 8px 6px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Column widths */
+.user-table th:nth-child(1),
+.user-table td:nth-child(1) {
+  width: 6%;
+}
+
+.user-table th:nth-child(2),
+.user-table td:nth-child(2) {
+  width: 14%;
+}
+
+.user-table th:nth-child(3),
+.user-table td:nth-child(3) {
+  width: 22%;
+}
+
+.user-table th:nth-child(4),
+.user-table td:nth-child(4) {
+  width: 10%;
+}
+
+.user-table th:nth-child(5),
+.user-table td:nth-child(5) {
+  width: 18%;
+}
+
+.user-table th:nth-child(6),
+.user-table td:nth-child(6) {
+  width: 30%;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .Four {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  .taable-container {
+    margin-top: 20px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
