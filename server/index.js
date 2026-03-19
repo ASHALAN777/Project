@@ -13,7 +13,7 @@ const helmet = require("helmet");
 const AuthRouter = require("./Routes/Router");
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+// const PORT = process.env.PORT || 3001;
 
 const frontendURL = process.env.FRONTEND_URL;
 
@@ -59,8 +59,11 @@ app.use("/api/auth", AuthRouter);
 
 
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`Server is running on port ${PORT}`);
+// });
+
+
+module.exports= app;
 
 
