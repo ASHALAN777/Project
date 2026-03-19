@@ -10,22 +10,22 @@ const AuthRouter = require("./Routes/Router");
 
 const app = express();
 
-const frontendURL = process.env.FRONTEND_URL;
+const frontendURL = process.env.FRONTEND_URL || "http://localhost:5173";
 
 // CORS first
 app.use(
   cors({
-    origin: frontendURL,
+    origin: function(origin, callback) {
+      if (!origin) return callback(null, true);
+      if (frontendURL === origin) return callback(null, true);
+      callback(new Error("Not allowed by CORS"));
+    },
     credentials: true,
   })
 );
 
 // Security headers
-app.use(
-  helmet({
-    crossOriginResourcePolicy: false,
-  })
-);
+app.use(helmet({ crossOriginResourcePolicy: false }));
 
 // Parsers
 app.use(express.json({ limit: "10kb" }));
@@ -43,5 +43,4 @@ app.use(limiter);
 // Routes
 app.use("/api/auth", AuthRouter);
 
-// ✅ Export for Vercel serverless
 module.exports = app;
