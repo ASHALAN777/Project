@@ -4,66 +4,44 @@ const cookieParser = require("cookie-parser");
 const rateLimit = require("express-rate-limit");
 require("dotenv").config();
 require("./Models/db");
-require("./middleware/Cronjob");
 const mongoSanitize = require("express-mongo-sanitize");
-
 const helmet = require("helmet");
-
-
 const AuthRouter = require("./Routes/Router");
 
 const app = express();
-// const PORT = process.env.PORT || 3001;
 
 const frontendURL = process.env.FRONTEND_URL;
 
-// CORS FIRST
+// CORS first
 app.use(
   cors({
-    origin: frontendURL, // EXACT frontend URL
-    credentials: true,               // allow cookies
-  })
-);
-app.use(
-  helmet({
-    crossOriginResourcePolicy: false
+    origin: frontendURL,
+    credentials: true,
   })
 );
 
-//  THEN parsers
+// Security headers
+app.use(
+  helmet({
+    crossOriginResourcePolicy: false,
+  })
+);
+
+// Parsers
 app.use(express.json({ limit: "10kb" }));
 app.use(cookieParser());
 app.use(mongoSanitize());
 
-
-
-
-
-
-  //  THEN rate limiter
-  const limiter = rateLimit({
-  windowMs: 10 * 60 * 1000, // 10 minutes
-  max: 100,                 // max requests per IP
-  message: "Too many requests, try again after 10 seconds",
+// Rate limiter
+const limiter = rateLimit({
+  windowMs: 10 * 60 * 1000,
+  max: 100,
+  message: "Too many requests, try again after 10 minutes",
 });
-
 app.use(limiter);
 
-
-
-
-
-
-// //  THEN routes
+// Routes
 app.use("/api/auth", AuthRouter);
 
-
-
-// app.listen(PORT, () => {
-//   console.log(`Server is running on port ${PORT}`);
-// });
-
-
-module.exports= app;
-
-
+// ✅ Export for Vercel serverless
+module.exports = app;
