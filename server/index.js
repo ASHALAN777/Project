@@ -9,7 +9,7 @@ const AuthRouter = require("./Routes/Router");
 
 const app = express();
 
-const frontendURL = process.env.FRONTEND_URL || "http://localhost:5173";
+const frontendURL = process.env.FRONTEND_URL || "http://localhost:5173" ,"https://usermanagement-lemon.vercel.app" ;
 
 // CORS first
 app.use(
